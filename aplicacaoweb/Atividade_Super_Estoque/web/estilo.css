@@ -1,0 +1,65 @@
+body{
+    background-color: #ccccff;
+    display: table;
+    margin: auto;}
+#telalogin{
+    background-color: #ffffff;
+    min-height: 300px;
+    max-height: 305px;
+    min-width: 300px;
+    max-width: 305px;
+    border-color: #cccccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #333333;
+    position:absolute; 
+    top:50%; 
+    margin-top:-150px;
+    margin-left:-150px;}
+h3{
+    color:#000066;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px; 
+    
+}
+h4{
+    color: #0000d0 ;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 15px;  
+}
+h5{
+    font-size: 18px;
+}
+#containerLoginSenha{
+    color:#999999;
+    margin: auto;
+    margin-top: 50px;
+    margin-left:  70px;
+    
+}
+      table
+      {
+          border-collapse: collapse;
+       border: 2px solid blue;
+      }
+      tr{
+          
+      }
+      th{
+          width: 130px;
+          height: 10px;
+          line-height: 1px;
+          background-color: #0061db;
+          color: #ffffff;
+          border: 2px solid blue;
+      }
+      td{
+          width: 130px;
+          height: 10px;          
+          line-height:1px;
+          border: 2px solid blue;
+            }
+            th,td{
+                text-align: center;
+            }

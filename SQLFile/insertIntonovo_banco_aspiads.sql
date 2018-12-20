@@ -1,0 +1,61 @@
+INSERT INTO produto(produto) value ('celular');
+INSERT INTO produto(produto) value ('tablet');
+INSERT INTO produto(produto) value ('notebook');
+
+INSERT INTO marca(marca) value ('Sony');
+INSERT INTO marca(marca) value ('Apple');
+INSERT INTO marca(marca) value ('Nokia');
+INSERT INTO marca(marca) value ('Philco');
+INSERT INTO marca(marca) value ('Samsung');
+
+INSERT INTO preco(valorr, valora) value (999.99,1050.00);
+INSERT INTO preco(valorr, valora) value (1999.99,2000.00);
+INSERT INTO preco(valorr, valora) value (2999.99,3000.00);
+INSERT INTO preco(valorr, valora) value (550.60,800.00);
+INSERT INTO preco(valorr, valora) value (2000.00,2800.99);
+INSERT INTO preco(valorr, valora) value (2500.00,3000.00);
+INSERT INTO preco(valorr, valora) value (789.98,950.00);
+INSERT INTO preco(valorr, valora) value (1050.50,1900.00);
+INSERT INTO preco(valorr, valora) value (999.99,1080.00);
+INSERT INTO preco(valorr, valora) value (999.99,1900.00);
+INSERT INTO preco(valorr, valora) value (999.99,1900.00);
+INSERT INTO preco(valorr, valora) value (1600.00,1900.00);
+INSERT INTO preco(valorr, valora) value (450.00,800.00);
+INSERT INTO preco(valorr, valora) value (350.00,550.00);
+INSERT INTO preco(valorr, valora) value (950.00,1600.00);
+
+insert into cor(cor, quant) value('preto',3);
+insert into cor(cor, quant) value('branco',2);
+insert into cor(cor, quant) value('preto',4);
+insert into cor(cor, quant) value('preto',1);
+insert into cor(cor, quant) value('branco',1);
+insert into cor(cor, quant) value('vermelho',1);
+insert into cor(cor, quant) value('preto',4);
+insert into cor(cor, quant) value('branco',2);
+insert into cor(cor, quant) value('vermelho',1);
+insert into cor(cor, quant) value('preto',2);
+insert into cor(cor, quant) value('preto',1);
+insert into cor(cor, quant) value('prata',2);
+insert into cor(cor, quant) value('preto',2);
+insert into cor(cor, quant) value('preto',1);
+insert into cor(cor, quant) value('branco',2);
+insert into cor(cor, quant) value('preto',2);
+insert into cor(cor, quant) value('branco',1);
+insert into cor(cor, quant) value('preto',2);
+
+insert into modelo(modelo) value('iPhone 5s');
+insert into modelo(modelo) value('iPad 2 Apple');
+insert into modelo(modelo) value('VAIO Fit SVF14215CBB');
+insert into modelo(modelo) value('Lumia 520');
+insert into modelo(modelo) value('Inspiron 14R-5437-A30');
+insert into modelo(modelo) value('Inspiron 14-3421-A20');
+insert into modelo(modelo) value('Galaxy Y');
+insert into modelo(modelo) value('Galaxy Tab 3');
+insert into modelo(modelo) value('Galaxy S5');
+insert into modelo(modelo) value('Galaxy S4');
+insert into modelo(modelo) value('Galaxy S3');
+insert into modelo(modelo) value('Chromebook');
+insert into modelo(modelo) value('C3313');
+insert into modelo(modelo) value('7A-B111A4.0');
+insert into modelo(modelo) value('ATIV Book 2');
+

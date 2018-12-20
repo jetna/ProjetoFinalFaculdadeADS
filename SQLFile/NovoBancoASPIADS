@@ -1,0 +1,153 @@
+CREATE DATABASE  IF NOT EXISTS `aspiads` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `aspiads`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: 127.0.0.1    Database: aspiads
+-- ------------------------------------------------------
+-- Server version	5.5.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cor`
+--
+
+DROP TABLE IF EXISTS `cor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cor` varchar(45) DEFAULT NULL,
+  `quant` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cor`
+--
+
+LOCK TABLES `cor` WRITE;
+/*!40000 ALTER TABLE `cor` DISABLE KEYS */;
+INSERT INTO `cor` VALUES (1,'preto',3),(2,'branco',2),(3,'preto',4),(4,'preto',1),(5,'branco',1),(6,'vermelho',1),(7,'preto',4),(8,'branco',2),(9,'vermelho',1),(10,'preto',2),(11,'preto',1),(12,'prata',2),(13,'preto',2),(14,'preto',1),(15,'branco',2),(16,'preto',2),(17,'branco',1),(18,'preto',2);
+/*!40000 ALTER TABLE `cor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `marca`
+--
+
+DROP TABLE IF EXISTS `marca`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `marca` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `marca` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_produto` FOREIGN KEY (`id`) REFERENCES `produto` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `marca`
+--
+
+LOCK TABLES `marca` WRITE;
+/*!40000 ALTER TABLE `marca` DISABLE KEYS */;
+/*!40000 ALTER TABLE `marca` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `modelo`
+--
+
+DROP TABLE IF EXISTS `modelo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `modelo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `modelo` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_preco` FOREIGN KEY (`id`) REFERENCES `preco` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cor` FOREIGN KEY (`id`) REFERENCES `cor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_marca` FOREIGN KEY (`id`) REFERENCES `marca` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `modelo`
+--
+
+LOCK TABLES `modelo` WRITE;
+/*!40000 ALTER TABLE `modelo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `modelo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `preco`
+--
+
+DROP TABLE IF EXISTS `preco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `preco` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `valorr` float DEFAULT NULL,
+  `valora` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `preco`
+--
+
+LOCK TABLES `preco` WRITE;
+/*!40000 ALTER TABLE `preco` DISABLE KEYS */;
+INSERT INTO `preco` VALUES (1,999.99,1050),(2,1999.99,2000),(3,2999.99,3000),(4,550.6,800),(5,2000,2800.99),(6,2500,3000),(7,789.98,950),(8,1050.5,1900),(9,999.99,1080),(10,999.99,1900),(11,999.99,1900),(12,1600,1900),(13,450,800),(14,350,550),(15,950,1600);
+/*!40000 ALTER TABLE `preco` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `produto`
+--
+
+DROP TABLE IF EXISTS `produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `produto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `produto` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produto`
+--
+
+LOCK TABLES `produto` WRITE;
+/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
+INSERT INTO `produto` VALUES (1,'celular'),(2,'tablet'),(3,'notebook');
+/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-05-18 23:27:26
